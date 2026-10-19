@@ -13,7 +13,8 @@ description: MiniMax H3 导演台长视频生产 Agent（MXA＝导演台线）�
 
 ## 2. 云端工作流（实证钉死，2026-10-06）
 
-- 工作流：RunningHub **2084788947984666625**（帖子 post/2084788947984666625，邀请码 zedwxo2q），**已发布** workflow（非 ai-app）。
+- 工作流：**《MiniMax H3 导演台全能工作流》**，RunningHub **2084788947984666625**，出口地址 **https://www.runninghub.cn/post/2084788947984666625**（邀请码 zedwxo2q），**已发布** workflow（非 ai-app）。
+- **开拍前核对出口（用户 2026-10-19 定规）**：每次用本线做片、派发之前，先核对出口——名称《MiniMax H3 导演台全能工作流》、地址 post/2084788947984666625、工作流 ID 2084788947984666625，三样与本节一致才许派发；对不上先停下报用户，不许将就用别的流顶替。
 - 节点共 11 个：1, 2, 3, 4, 6, 7, 8, 12, 16, 17, 25。普查档案见 `references/workflow_census.md`。
 - **派发只动 Node 12**（MiniMaxH3Director），可写字段：task_type、global_prompt、timeline_data、total_frames、frame_rate、seed、width、height、steps、cfg、model、sampler、clip、ref_max_size、scheduler。
 - Node 6 是 CreateVideo（输出合成），**不是图片入口**，不许往 Node 6 塞图。`r2v_groups` / `i2v_groups` 不是 API 可写字段。`ref_max_size` 写不写无任何影响（同种子对照实证）。
