@@ -71,7 +71,7 @@
 
 操作链（按顺序）：
 
-1. **视频挂视频参考**：Video 1（refVideos index 0，双层 global＋segments 都写），只取动作、机位、站位。词里写死：Video 1 仅动作参考，不提取任何形象、身份、服装；不许学骨骼线条视觉风格，必须渲染正常写实画面；画面不许出任何文字。
+1. **视频挂视频参考**：Video 1（refVideos index 0，双层 global＋segments 都写），只负责动作与站位（2026-11-04 用户亲定；切镜归提示词分镜按原片切点写死，口型与台词节奏归原声）。词里写死：Video 1 仅动作参考，不提取任何形象、身份、服装；不许学骨骼线条视觉风格，必须渲染正常写实画面；画面不许出任何文字。
 2. **音频**：从原视频提取原生轨（ffmpeg -vn），挂第 2 个音频槽（refAudios index 1＝<Audio 2>），audioMode=source（双层都写）。派发器用 `~/workspace/diaoge_music_dance/dispatch_audio_idx1.py`（audio index 1 版；index 0 版 `dispatch_audio.py` 不许代用——用户点名第 2 个）。
 3. **人**：演员卡挂 Picture 1（卡原图直参，md5 一致可复用已上传 openapi 路径），脸与服装只认卡，不认视频。帽子等造型锁按卡＋当次要求写死。
 4. **场景**：骨骼视频没有场景信息——场景必须在词里文字定死（用户另给场景图时挂 Picture 3 锁 1:1），不许让模型渲染黑空／骨骼底。
